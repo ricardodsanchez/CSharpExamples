@@ -36,6 +36,12 @@ namespace CSharpApp.Examples
 
             // It creates a Lookup with the 'Author' as the Key, and a List<Book> as the value, it returns three items
             var aUniqueLookup = books.ToLookup(b => b.Author, b => b, StringComparer.OrdinalIgnoreCase);
+
+            // Write the item count of each object above to see the difference
+            Console.WriteLine($"notAUniqueListOfBooks has {notAUniqueListOfBooks.Count()} items.");
+            Console.WriteLine($"aUniqueListOfBooks has {aUniqueListOfBooks.Count()} items.");
+            Console.WriteLine($"notAUniqueBookDictionary has {notAUniqueBookDictionary.Count()} items.");
+            Console.WriteLine($"aUniqueLookup has {aUniqueLookup.Count()} items.");
         }
     }
 
